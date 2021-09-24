@@ -34,17 +34,17 @@ const (
 
 //new print result
 func Print(res machine.Result) {
-	log.Info("ip=%s", res.Ip)
+	// log.Info("ip=%s", res.Ip)
 	//index := strings.Index(cmd, ";")
 	//newcmd := cmd[index+1:]
 	//fmt.Printf("ip=%s|command=%s\n", ip, cmd)
-	log.Info("command=%s", res.Cmd)
+	// log.Info("command=%s", res.Cmd)
 	if res.Err != nil {
 
-		log.Error("return=1")
+		log.Error("return=1\tip=%s\tcommand=%s", res.Ip, res.Cmd)
 		log.Error("%s", res.Err)
 	} else {
-		log.Info("return=0")
+		log.Info("return=0\tip=%s\tcommand=%s", res.Ip, res.Cmd)
 		log.Info("%s", res.Result)
 	}
 	log.Info("----------------------------------------------------------")
@@ -74,8 +74,8 @@ func PrintPushResult(ip, src, dst string, err error) {
 	fmt.Println("ip=", ip)
 	fmt.Println("command=", "scp "+src+" root@"+ip+":"+dst)
 	if err != nil {
-		fmt.Printf("return=1\n")
-		fmt.Println(err)
+		log.Error("return=1\n")
+		log.Error(err)
 	} else {
 		fmt.Printf("return=0\n")
 		fmt.Printf("Push %s to %s ok.\n", src, dst)
