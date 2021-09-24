@@ -18,7 +18,7 @@ package output
 
 import (
 	//	"context"
-	"fmt"
+	// "fmt"
 
 	"github.com/andesli/gossh/log"
 	"github.com/andesli/gossh/machine"
@@ -61,7 +61,7 @@ func PrintResults2(crs chan machine.Result, ls int, wt *sync.WaitGroup, ccons ch
 			//PrintResult(rs.Ip, rs.Cmd, rs.Result)
 			Print(rs)
 		case <-time.After(time.Second * time.Duration(timeout)):
-			fmt.Printf("getSSHClient error,SSH-Read-TimeOut,Timeout=%ds", timeout)
+			log.Info("getSSHClient error,SSH-Read-TimeOut,Timeout=%ds", timeout)
 		}
 		wt.Done()
 		<-ccons
@@ -71,28 +71,32 @@ func PrintResults2(crs chan machine.Result, ls int, wt *sync.WaitGroup, ccons ch
 
 //print push file result
 func PrintPushResult(ip, src, dst string, err error) {
-	fmt.Println("ip=", ip)
-	fmt.Println("command=", "scp "+src+" root@"+ip+":"+dst)
+	// fmt.Println("ip=", ip)
+	// fmt.Println("command=", "scp "+src+" root@"+ip+":"+dst)
 	if err != nil {
-		log.Error("return=1\n")
-		log.Error(err)
+		log.Error("return=1\tip=%s\tPush %s to %s", ip, src, dst)
+		log.Error("%s", err)
 	} else {
-		fmt.Printf("return=0\n")
-		fmt.Printf("Push %s to %s ok.\n", src, dst)
+		// fmt.Printf("return=0\n")
+		// fmt.Printf("Push %s to %s ok.\n", src, dst)
+		log.Info("return=0\tip=%s\tPush %s to %s ok.", ip, src, dst)
 	}
-	fmt.Println("----------------------------------------------------------")
+	log.Info("----------------------------------------------------------")
 }
 
 //print pull result
 func PrintPullResult(ip, src, dst string, err error) {
-	fmt.Println("ip=", ip)
-	fmt.Println("command=", "scp "+" root@"+ip+":"+dst+" "+src)
+	// fmt.Println("ip=", ip)
+	// fmt.Println("command=", "scp "+" root@"+ip+":"+dst+" "+src)
 	if err != nil {
-		fmt.Printf("return=1\n")
-		fmt.Println(err)
+		// fmt.Printf("return=1\n")
+		// fmt.Println(err)
+		log.Error("return=1\tip=%1s\tPull from %s:%s to %s", ip, ip, dst, src)
+		log.Error("%s", err)
 	} else {
-		fmt.Printf("return=0\n")
-		fmt.Printf("Pull from %s to %s ok.\n", dst, src)
+		// fmt.Printf("return=0\n")
+		// fmt.Printf("Pull from %s to %s ok.\n", dst, src)
+		log.Info("return=0\tip=%s\tPull from %s:%s to %s ok.", ip, ip, dst, src)
 	}
-	fmt.Println("----------------------------------------------------------")
+	log.Info("----------------------------------------------------------")
 }

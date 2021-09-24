@@ -1,0 +1,152 @@
+[36mINFO[0m[2021-09-24T13:53:52+08:00] gossh -t=cmd  cmd=[ls /]                     
+[31mERRO[0m[2021-09-24T13:53:52+08:00] Parse Ip File ip.txt error,open /root/ligq/greenplum/githubmaster/gossh/bin/amd64/linux/ip.txt: no such file or directory 
+[31mERRO[0m[2021-09-24T13:53:52+08:00] Parse ip.txt error, error=open /root/ligq/greenplum/githubmaster/gossh/bin/amd64/linux/ip.txt: no such file or directory 
+[36mINFO[0m[2021-09-24T13:55:56+08:00] gossh -t=cmd  cmd=[ls /]                     
+[31mERRO[0m[2021-09-24T13:55:56+08:00] Parse ip.txt error, error=ip.txt is null     
+[36mINFO[0m[2021-09-24T13:56:29+08:00] gossh -t=cmd  cmd=[ls /]                     
+[36mINFO[0m[2021-09-24T13:56:29+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T13:56:29+08:00] return=1	ip=10.2.7.8	command=ls /            
+[31mERRO[0m[2021-09-24T13:56:29+08:00] GET PASSWORD ERROR                           
+[36mINFO[0m[2021-09-24T13:56:29+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T13:56:49+08:00] gossh -t=cmd  cmd=[ls /]                     
+[36mINFO[0m[2021-09-24T13:56:49+08:00] [servers]=[10.2.7.8]                         
+[36mINFO[0m[2021-09-24T13:56:49+08:00] return=0	ip=10.2.7.8	command=ls /            
+[36mINFO[0m[2021-09-24T13:56:49+08:00] a.txt
+bin
+boot
+cfs
+cfs.old
+data
+data1
+datapool
+dev
+disk
+etc
+export
+home
+ÐÞ¸ÄµÄÄÚÈÝ±êÌâ
+ÐÞ¸ÄµÄ²âÊÔÏî±êÌâ.txt
+LeoCluster
+lib
+lib64
+lost+found
+ls.sh
+manager
+media
+mnt
+opt
+proc
+Python-2.7.18.tgz
+root
+run
+sbin
+srv
+sys
+tmp
+tools
+usr
+var
+wget-log
+wget-log.1
+wget-log.2
+wget-log.3
+wget-log.4
+workspace-logs 
+[36mINFO[0m[2021-09-24T13:56:49+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T13:57:49+08:00] gossh -t=cmd  cmd=[ls /uio]                  
+[36mINFO[0m[2021-09-24T13:57:49+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T13:57:49+08:00] return=1	ip=10.2.7.8	command=ls /uio         
+[31mERRO[0m[2021-09-24T13:57:49+08:00] Process exited with status 2                 
+[36mINFO[0m[2021-09-24T13:57:49+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T13:58:24+08:00] gossh -t=push local-file=/a, remote-path=/root 
+[36mINFO[0m[2021-09-24T13:58:24+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T13:58:25+08:00] return=1	ip=10.2.7.8	command=push /a to 10.2.7.8:/root 
+[31mERRO[0m[2021-09-24T13:58:25+08:00] stat /a: no such file or directory           
+[36mINFO[0m[2021-09-24T13:58:25+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T13:58:37+08:00] gossh -t=pull remote-file=/a  local-path=/root 
+[36mINFO[0m[2021-09-24T13:58:37+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T13:58:37+08:00] return=1	ip=10.2.7.8	Pull from /root/10.2.7.8 to /a 
+[31mERRO[0m[2021-09-24T13:58:37+08:00] Remote Server's /a doesn't exist.            
+[36mINFO[0m[2021-09-24T13:58:37+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:00:18+08:00] gossh -t=pull remote-file=/a  local-path=/root 
+[36mINFO[0m[2021-09-24T14:00:18+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T14:00:19+08:00] return=1	ip=10.2.7.8	Pull from /root/10.2.7.8 to /a 
+[31mERRO[0m[2021-09-24T14:00:19+08:00] Remote Server's /a doesn't exist.            
+[36mINFO[0m[2021-09-24T14:00:19+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:01:34+08:00] gossh -t=pull remote-file=/a  local-path=/root 
+[36mINFO[0m[2021-09-24T14:01:34+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T14:01:35+08:00] return=1	ip=10.2.7.8	Pull from /a to /root/10.2.7.8 
+[31mERRO[0m[2021-09-24T14:01:35+08:00] Remote Server's /a doesn't exist.            
+[36mINFO[0m[2021-09-24T14:01:35+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:01:57+08:00] gossh -t=push local-file=/a, remote-path=/root 
+[36mINFO[0m[2021-09-24T14:01:57+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T14:01:57+08:00] return=1	ip=10.2.7.8	command=push /a to 10.2.7.8:/root 
+[31mERRO[0m[2021-09-24T14:01:57+08:00] stat /a: no such file or directory           
+[36mINFO[0m[2021-09-24T14:01:57+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:02:44+08:00] gossh -t=push local-file=/root/ip.txt, remote-path=/root 
+[36mINFO[0m[2021-09-24T14:02:44+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T14:02:44+08:00] return=1	ip=10.2.7.8	command=push /root/ip.txt to 10.2.7.8:/root 
+[31mERRO[0m[2021-09-24T14:02:44+08:00] <ERROR>
+Remote Server's /root has the same file /root/ip.txt
+You can use `-f` option force to cover the remote file.
+</ERROR> 
+[36mINFO[0m[2021-09-24T14:02:44+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:02:59+08:00] gossh -t=push local-file=/root/ip.txt, remote-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:02:59+08:00] [servers]=[10.2.7.8]                         
+[36mINFO[0m[2021-09-24T14:02:59+08:00] return=0	ip=10.2.7.8	command=push /root/ip.txt to 10.2.7.8:/root/ligq 
+[36mINFO[0m[2021-09-24T14:02:59+08:00] push /root/ip.txt to 10.2.7.8:/root/ligq ok  
+[36mINFO[0m[2021-09-24T14:02:59+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:03:11+08:00] gossh -t=push local-file=/root/ip.txt1, remote-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:03:11+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T14:03:11+08:00] return=1	ip=10.2.7.8	command=push /root/ip.txt1 to 10.2.7.8:/root/ligq 
+[31mERRO[0m[2021-09-24T14:03:11+08:00] stat /root/ip.txt1: no such file or directory 
+[36mINFO[0m[2021-09-24T14:03:11+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:03:46+08:00] gossh -t=pull remote-file=/root/ip.txt  local-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:03:46+08:00] [servers]=[10.2.7.8]                         
+[36mINFO[0m[2021-09-24T14:03:46+08:00] return=0	ip=10.2.7.8	Pull from /root/ip.txt to /root/ligq/10.2.7.8 ok. 
+[36mINFO[0m[2021-09-24T14:03:46+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:10:21+08:00] gossh -t=pull remote-file=/root/ip.txt  local-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:10:21+08:00] [servers]=[10.2.7.8]                         
+[36mINFO[0m[2021-09-24T14:10:21+08:00] return=0	ip=10.2.7.8	Pull from /root/ip.txt to /root/ligq/10.2.7.8 ok. 
+[36mINFO[0m[2021-09-24T14:10:21+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:11:51+08:00] gossh -t=pull remote-file=/root/ip.txt  local-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:11:51+08:00] [servers]=[10.2.7.8]                         
+[36mINFO[0m[2021-09-24T14:11:51+08:00] return=0	ip=10.2.7.8	Pull from /root/ip.txt to /root/ligq/10.2.7.8 ok. 
+[36mINFO[0m[2021-09-24T14:11:51+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:15:04+08:00] gossh -t=pull remote-file=/root/ip.txt  local-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:15:04+08:00] [servers]=[10.2.7.8]                         
+[36mINFO[0m[2021-09-24T14:15:05+08:00] return=0	ip=10.2.7.8	Pull from /root/ip.txt to /root/ligq/10.2.7.8 ok. 
+[36mINFO[0m[2021-09-24T14:15:05+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:15:28+08:00] gossh -t=pull remote-file=/root/ip.txt1  local-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:15:28+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T14:15:28+08:00] return=1	ip=10.2.7.8	Pull from /root/ip.txt1:/root/ligq/10.2.7.8 to %!s(MISSING) 
+[31mERRO[0m[2021-09-24T14:15:28+08:00] Remote Server's /root/ip.txt1 doesn't exist. 
+[36mINFO[0m[2021-09-24T14:15:28+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:17:36+08:00] gossh -t=pull remote-file=/root/ip.txt1  local-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:17:36+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T14:17:36+08:00] return=1	ip=10.2.7.8	Pull from 10.2.7.8:/root/ip.txt1 to /root/ligq/10.2.7.8 
+[31mERRO[0m[2021-09-24T14:17:36+08:00] Remote Server's /root/ip.txt1 doesn't exist. 
+[36mINFO[0m[2021-09-24T14:17:36+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:18:09+08:00] gossh -t=pull remote-file=/root/ip.txt1  local-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:18:09+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T14:18:09+08:00] return=1	ip=10.2.7.8	Pull from 10.2.7.8:/root/ip.txt1 to /root/ligq/10.2.7.8 
+[31mERRO[0m[2021-09-24T14:18:09+08:00] Remote Server's /root/ip.txt1 doesn't exist. 
+[36mINFO[0m[2021-09-24T14:18:09+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:18:14+08:00] gossh -t=pull remote-file=/root/ip.txt  local-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:18:14+08:00] [servers]=[10.2.7.8]                         
+[36mINFO[0m[2021-09-24T14:18:14+08:00] return=0	ip=10.2.7.8	Pull from 10.2.7.8:/root/ip.txt to /root/ligq/10.2.7.8 ok. 
+[36mINFO[0m[2021-09-24T14:18:14+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:19:14+08:00] gossh -t=pull remote-file=/root/ip.txt  local-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:19:14+08:00] [servers]=[10.2.7.8]                         
+[36mINFO[0m[2021-09-24T14:19:15+08:00] return=0	ip=10.2.7.8	Pull from 10.2.7.8:/root/ip.txt to /root/ligq/10.2.7.8 ok. 
+[36mINFO[0m[2021-09-24T14:19:15+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:19:20+08:00] gossh -t=push local-file=/root/ip.txt1, remote-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:19:20+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T14:19:20+08:00] return=1	ip=10.2.7.8	command=push /root/ip.txt1 to 10.2.7.8:/root/ligq 
+[31mERRO[0m[2021-09-24T14:19:20+08:00] stat /root/ip.txt1: no such file or directory 
+[36mINFO[0m[2021-09-24T14:19:20+08:00] ---------------------------------------------------------- 
+[36mINFO[0m[2021-09-24T14:20:15+08:00] gossh -t=push local-file=/root/ip.txt1, remote-path=/root/ligq 
+[36mINFO[0m[2021-09-24T14:20:15+08:00] [servers]=[10.2.7.8]                         
+[31mERRO[0m[2021-09-24T14:20:15+08:00] return=1	ip=10.2.7.8	command=push /root/ip.txt1 to 10.2.7.8:/root/ligq 
+[31mERRO[0m[2021-09-24T14:20:15+08:00] stat /root/ip.txt1: no such file or directory 
+[36mINFO[0m[2021-09-24T14:20:15+08:00] ---------------------------------------------------------- 
